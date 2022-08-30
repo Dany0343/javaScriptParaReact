@@ -251,3 +251,47 @@
 // -------------------------------------------------------------------------------------------------------------
 
 // return en funciones
+
+// const button = document.createElement('button');
+// button.innerText = "Click me";
+
+// const isAuthorized = true;
+
+// button.addEventListener('click', () => {
+//     if (isAuthorized) {
+//         return alert("Está autorizado");
+//     }
+
+//     alert("No está autorizado");
+// });
+
+// document.body.append(button);
+
+
+// ------------------------------------------------------------------------------------------------------------
+
+// String literals
+// Es epico poder utilizar código, en estecaso condicionales dentro de un template string y en ${}
+
+// const background = 'yellow';
+// const color = 'white';
+// const isAuthorized = false;
+
+// const button = document.createElement('button');
+// button.innerText = "Click me";
+// button.style = `background: ${isAuthorized ? background : 'red'}; color: ${color}`;// Interpolacion y operador ternario
+
+
+// button.addEventListener('click', () => {
+//     if (isAuthorized) {
+//         return alert("Está autorizado");
+//     }
+
+//     alert("No está autorizado");
+// });
+
+// document.body.append(button);
+
+// -------------------------------------------------------------------------------------------------------------
+
+// Array methods
