@@ -295,3 +295,63 @@
 // -------------------------------------------------------------------------------------------------------------
 
 // Array methods
+// const names = ['Oscar', 'Rian', 'Maria'];
+
+// // Toma muchas lineas
+// // for (let i = 0; i < names.length; i++) {
+// //     const element = names[i];
+    
+// //     console.log(element);
+// // }
+
+// // forEach
+
+// names.forEach(function(name){ // Recibe una función, esta al ejecutarse lo que va retornar son los valores que la función estará recibiendo
+//     console.log(name);
+// });
+// // Es un callback jsjsjs
+
+
+// // map
+// const newNames = names.map(function (name){ // Produce el mismo resultado que forEach pero no tan solo lo recorre, retorna un nuevo arreglo
+//     // console.log(name)
+//     // Esta función en cada iteración debe retornar un valor, se usa mucho en React
+//     return `Hola ${name}`;
+// });
+// console.log(newNames);
+
+
+// // find
+// // Retorna el valor del primer elemento
+// const nameFound = names.find(function(name) {
+//     if( name == 'Oscar' ){
+//         return name;
+//     }
+// });
+
+// console.log(nameFound);
+
+
+// // filter
+// // filter lo que haces es que permite crear un nuevo arreglo con elementos que hayamos filtrado, con elementos que cumplan una condición
+// // Es como un delete
+// // Devuelve los elementos que cumplen una condicion
+// const filtrated = names.filter(function(name){
+//     if (name == 'Oscar') {
+//         return name;
+//     }
+// })
+// console.log(names); // Se tiene el arreglo original
+// console.log(filtrated);
+
+
+// concat 
+
+// const names = ['Oscar', 'Rian', 'Maria'];
+// const newNames = ['Marcos', 'David', 'John'];
+
+// names.concat(newNames); // Produce un nuevo arreglo combinando ambos
+// No altera los arreglos originales
+
+
+// ----------------------------------------------------------------------------------------------------------
