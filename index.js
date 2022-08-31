@@ -239,7 +239,7 @@
 // const showObject = () => ({name: "Oscar"}) // Aquí hay un problema ya que lo detecta como el cuerpo de la función
 // Se coloca entre parentesis, al colocarlo entre parentesis se regresa el objeto con todo y llaves
 // A esto se le llama return explicito
-// Si no colocamos llaves y directamente colocamos el valor es como colocar un return. return implicito
+// Si no colocamos llaves y directamente colocamos el valor es como   un return. return implicito
 
 // console.log(showText());
 // console.log(showText2());
@@ -355,3 +355,90 @@
 
 
 // ----------------------------------------------------------------------------------------------------------
+
+// Spread operator
+// Forma practica de concatenar
+
+// const names = ['Ryan', 'Joe', 'Maria'];
+// const newNames = ['Marcos', 'Mario', 'John'];
+
+// console.log([...names, ...newNames]); // Tambien se puede con objetos
+
+// const user = {
+//     name: "ryan",
+//     lastname: "ray",
+// }
+
+// const address = {
+//     street: 'Olmo',
+//     city: 'Izcalli',
+// }
+
+// const userInfo = {...user, ...address};
+// console.log(userInfo);
+
+// --------------------------------------------------------------------------------------------------------------
+
+// ECMAScript Modules
+// En el navegador aún no están por defecto estos modulos
+// import {add, multiply, active, points, title} from './add.js' ;// En llaves se hace un destructuring
+// console.log(active, points, title)
+// console.log(add(10, 20));
+// console.log(multiply(10, 20));
+
+// La extensión .js en algunos frameworks no es necesaria, es solo asunto de sintaxis
+// Se pueden exportar todo tipo de variables
+
+// ---------------------------------------------------------------------------------------------------------------
+
+//  Optional chaining
+// Se usa cuando tenemos propiedades que no existen o aún no tenemos
+// const person = {
+//     name: 'Oscar',
+//     address: {
+//         city: 'Izcalli'
+//     },
+// }
+// console.log(person?.location?.city); // El signo es el optional chaining, si location existe accede a su valor city
+
+
+// ---------------------------------------------------------------------------------------------------------------
+
+// Async await
+// Datos de un backend
+
+const ol = document.createElement('ol');
+
+// fetch('https://jsonplaceholder.typicode.com/posts')
+//     .then(function(response){
+//         return response.json();
+//     })
+//     .then(function(datos) {
+//         console.log(datos);
+//         datos.forEach(function(post) {
+//             const li = document.createElement('li');
+//             li.innerText = post.title;
+//             ol.append(li);
+//         });
+//         document.body.append(ol); 
+//     });
+
+// Esta sintaxis puede ser mejorada y moderna
+// Los await funcionan si están dentro de una función async
+
+async function loadData() {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts'); 
+    const data = await response.json();
+    data.forEach(function(post) {
+        const li = document.createElement('li');
+        li.innerText = post.title;
+        ol.append(li);
+    });
+    document.body.append(ol); 
+}
+
+loadData();
+
+console.log('Linea 2');
+
+// The end
